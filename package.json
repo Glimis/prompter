@@ -1,6 +1,9 @@
 {
   "name": "iprompter",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+},
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "npx vuepress build docs",
