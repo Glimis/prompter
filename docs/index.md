@@ -1,19 +1,22 @@
 ---
 home: true
 heroImage: /img/logo.png
-heroText: AIGC Notes
-tagline: 🚀AIGC Notes相关博客，积跬步以至千里，致敬每个爱学习的你。
-actionText: 开始使用 →
-actionLink: /pages/a2f161/
+heroText: Prompter Notes
+tagline: 🚀AIGC相关教程，积跬步以至千里，致敬每个爱学习的你。
+actionText: 快速入门 →
+actionLink: /pages/f2fd9d/
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
 features: # 可选的
   - title: 指南
-    details: 安装,注册,指令等基础概念,强烈推荐直接查阅 Midjourney 的官网文档
+    details: 相关法律,Midjourney与Discord关系,以及安装,注册,指令等基础概念
+    link: /pages/f2fd9d/
   - title: 词库
-    details: Midjourney关键词
-  - title: 实践
-    details: 以风格,实践为基础
+    details: Midjourney单一关键词,单一关键词类似英语中的单词,此处介绍了经典的单词
+    link: /pages/7a48e4/
+  - title: 技巧
+    details: 流行的操作项目以及一些使用技巧
+    link: /pages/38e34e/
 
 
 postList: none

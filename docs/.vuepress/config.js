@@ -47,14 +47,14 @@ module.exports = {
         //   }
         // ]
       },
-      { text: '词库', link: '/pages/db78e2/' },
-      // { text: '案例', link: '/pages/5d571c/' },
-      { text: '问答', link: '/pages/9cc27d/' },
+      { text: '词库', link: '/pages/7a48e4/' },
+      { text: '技巧', link: '/pages/38e34e/' },
+      // { text: '问答', link: '/pages/9cc27d/' },
       // { text: '赞助', link: '/pages/1b12ed/' },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
-    repo: 'xugaoyi/prompter', // 导航栏右侧生成Github链接
+    repo: 'Glimis/prompter', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
 
@@ -143,10 +143,10 @@ module.exports = {
     // }],
 
     [
-      'vuepress-plugin-baidu-tongji', // 百度统计
-      {
-        hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
-      }
+      // 'vuepress-plugin-baidu-tongji', // 百度统计
+      // {
+      //   hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
+      // }
     ],
 
     ['one-click-copy', { // 代码块复制按钮
@@ -155,16 +155,16 @@ module.exports = {
       duration: 1000, // prompt message display time.
       showInMobile: false // whether to display on the mobile side, default: false.
     }],
-    ['demo-block', { // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
-      settings: {
-        // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-        // cssLib: ['http://xxx'], // 在线示例中的css依赖
-        // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
-        jsfiddle: false, // 是否显示 jsfiddle 链接
-        codepen: true, // 是否显示 codepen 链接
-        horizontal: false // 是否展示为横向样式
-      }
-    }],
+    // ['demo-block', { // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+    //   settings: {
+    //     // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
+    //     // cssLib: ['http://xxx'], // 在线示例中的css依赖
+    //     // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+    //     jsfiddle: false, // 是否显示 jsfiddle 链接
+    //     codepen: true, // 是否显示 codepen 链接
+    //     horizontal: false // 是否展示为横向样式
+    //   }
+    // }],
     [
       'vuepress-plugin-zooming', // 放大图片
       {
@@ -189,10 +189,20 @@ module.exports = {
     // lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
   },
-
   // 监听文件变化并重新构建
   extraWatchFiles: [
     '.vuepress/config.js',
     '.vuepress/config/htmlModules.js',
-  ]
+  ],
+  configureWebpack(config){
+    
+    config.module.rules.push(
+      {
+        test: /\.(webp)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+    )
+  }
 }
